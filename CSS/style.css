@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header style */
+.header {
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+/* input/style logo */
+.logo{
+    background-image: url(../images/iconUtube.png);
+    background-size: cover;
+    width: 60px;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+/* serch styles */
+.searchContainer{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: flex;
+    margin-left: 650px;
+}
+
+.searchContainer .search{
+    background-color: rgb(43, 43, 43);
+    color:aliceblue;
+    height: 35px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+/* button styles */
+.searchContainer button{
+    border: none;
+    color: #222222;
+    background-color: rgb(61, 61, 61);
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-left: 10px;
+    padding-right: 12px;
+    transition: 1s;
+}
+
+.searchContainer button:hover{
+    color: rgb(238, 255, 0);
+    background:linear-gradient(red,rgb(255, 38, 0),rgb(255, 123, 0),rgb(255, 208, 0)
+    )
+}
+
+/* container style */
+
+.container1 {
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+    height: 850px;
+    display: flex;
+    padding: 50px;
+}
+
+
+
+
+
+
