@@ -6,13 +6,14 @@
 
 /* header style */
 .header {
-    background-color: black;
+    background:linear-gradient(black, rgb(29, 29, 29));
     width: 100%;
     height: 70px;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 10px;
+    border-bottom: 0.5px solid rgb(37, 37, 37);
 }
 
 /* input/style logo */
@@ -20,9 +21,17 @@
     background-image: url(../images/iconUtube.png);
     background-size: cover;
     width: 60px;
-    height: 50px;
-    margin-bottom: 10px;
+    height: 60px;
+    margin-bottom: px;
     margin-left: 10px;
+}
+
+/* isotype style */
+.isotype{
+    color: rgb(241, 228, 222);
+    font-family: "LeagueGothic";
+    margin-top: 7px;
+    margin-left: 7px;
 }
 
 /* serch styles */
@@ -30,11 +39,11 @@
     padding-top: 7px;
     padding-bottom: 7px;
     display: flex;
-    margin-left: 650px;
+    margin-left: 600px;
 }
 
 .searchContainer .search{
-    background-color: rgb(43, 43, 43);
+    background-color: rgb(31, 30, 30);
     color:aliceblue;
     height: 35px;
     border: none;
@@ -47,8 +56,8 @@
 /* button styles */
 .searchContainer button{
     border: none;
-    color: #222222;
-    background-color: rgb(61, 61, 61);
+    color: #474646;
+    background-color: rgb(49, 48, 48);
     border-bottom-right-radius: 40px;
     border-top-right-radius: 40px;
     padding-left: 10px;
@@ -57,22 +66,140 @@
 }
 
 .searchContainer button:hover{
-    color: rgb(238, 255, 0);
-    background:linear-gradient(red,rgb(255, 38, 0),rgb(255, 123, 0),rgb(255, 208, 0)
-    )
+    color: rgb(241, 228, 222);
+    background:linear-gradient(rgb(161, 0, 0),rgb(255, 0, 0),rgb(255, 30, 0),rgb(255, 123, 0))
 }
 
 /* container style */
-
 .container1 {
-    background-color: rgb(22, 22, 22);
+    background-color: black;
     width: 100%;
-    height: 850px;
+    height: 1300px;
     display: flex;
-    padding: 50px;
+    justify-content: space-between;
+    padding: 30px;
 }
 
+/* section style */
+.section {
+    background-color: black;
+    color: aliceblue;
+    width: 75%;
+    height: 1200px;
+}
 
+.section .containerTitle {
+    font-family: "RobotoRegular";
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+/* aside style */
+.aside {
+    background-color: black;
+    width: 23%;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside .infoChannel{
+    width: 100%;
+    height: 100px;
+    border: 0.5px solid rgb(51, 51, 51);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;  
+}
+
+.aside .infoChannel .photoChannel{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 20px;
+    border: 5px solid rgb(51, 51, 51);
+    transition: 1s;
+}
+
+.aside .infoChannel .photoChannel:hover{
+    border: 5px solid rgb(255, 0, 0);
+}
+
+.aside .infoChannel .nameChannel{
+    font-family: "RobotoRegular"; 
+    color: aliceblue; 
+    margin-top: 7px;
+    margin-left: 15px;
+}
+
+.aside .feedback {
+    width: 100%;
+    height: 800px;
+    border: 0.5px solid rgb(51, 51, 51);
+    border-radius: 10px;
+    overflow-y: auto; /*linea para generar el scroll*/
+    margin-bottom: 10px;
+}
+
+.aside .feedback::-webkit-scrollbar{
+    background-color: rgb(34, 34, 34);
+    border-radius: 10px;
+}
+
+.aside .feedback::-webkit-scrollbar-track{
+    background-color: rgb(39, 39, 39);
+}
+
+.aside .feedback::-webkit-scrollbar-thumb{
+    background-color: rgb(34, 34, 34);
+}
+
+.aside .feedback::-webkit-scrollbar-button{
+    background-color: rgb(24, 24, 24);
+    border-radius: 10px;
+}
+
+.aside .feedback .feedbackItem {
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    font-family: "RobotoRegular";
+    transition: 0.5s;
+    border: 0.5px solid transparent;
+}
+
+.aside .feedback .feedbackItem:hover{
+    background-color: #161616;
+    border: 0.5px solid rgb(51, 51, 51);
+}
+
+.videoDescription {
+    width: 100%;
+    color: aliceblue;
+    padding: 10px;
+    border: 0.5px solid rgb(51, 51, 51);
+    border-radius: 10px;
+
+}
+
+/* fuentes usadas en el estilo */
+@font-face {
+    font-family: "LeagueGothic";
+    src: url('../fonts/LeagueGothic.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: url('../fonts/RobotoRegular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
 
 
 

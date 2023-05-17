@@ -18,35 +18,51 @@
     <!-- div header (logo / search section) -->
     <div class="header">
         <div class="logo"></div>
+        <div class="isotype">
+            <h1>Utube</h1>
+        </div>
         <!-- div searchContainer (input/button) -->
         <div class="searchContainer">
             <input type="text" class="search">
             <button class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </div>
-    <!-- div container (section/aside) -->
+    <!-- div container1 (section/aside) -->
     <div class="container1">
         <!-- div section (video/title/advisedVideos)  -->
         <div class="section">
-            <div class="video"></div>
+            <!-- video -->
+            <div class="video">
+                <iframe width="100%" height="750px" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <!-- title -->
             <div class="containerTitle">
-                <h1 class="title"></h1>
+                <h5 class="title"></h5>
             </div>
             <div class="advisedVideos"></div>
         </div>
          <!-- div aside (infoChanel(photo/name)/feedback/videoDescription) -->
         <div class="aside">
+            <!-- div infoChannel (Photo/name) -->
             <div class="infoChannel">
-                <div class="photoChannel"></div>
-                <div class="nameChannel"></div>
+                <img src="./images/iconProfil.png" alt="" class="photoChannel">
+                <div class="nameChannel">
+                    <h4 class="nameChannelText"></h4>
+                </div>
             </div>
-            <div class="feedback"></div>
+            <!-- div feedback (feedbackItem(name/content)) -->
+            <div class="feedback">
+                <!-- <div class="feedbackItem">
+                    <h5 class="feedbackName">feedbackName</h5>
+                    <p class="feedbackContent">feedbackContent</p>
+                </div> -->
+            </div>
             <div class="videoDescription"></div>
         </div>
     </div>
     <!-- footer -->
     <div class="footer">
-        <h1 class="footerText"></h1>
+        <h2 class="footerText"></h2>
     </div>
 </body>
 </html>
