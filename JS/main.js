@@ -13,6 +13,7 @@ let photoChannel = document.querySelector('.photoChannel')
 let nameChannelText = document.querySelector('.nameChannelText')
 let Container = document.querySelector('.feedback')
 let videoDescription = document.querySelector('.videoDescription')
+let advisedVideos = document.querySelector('.advisedVideos')
 
 // variable que recibe la informacion del search por medio de la accion "click" en el "button"
 let button = document.querySelector('.button');
@@ -42,15 +43,26 @@ const getVideos = async (data) => {
       )
     ).json();
    
-    iframe.src = `https://www.youtube.com/embed/${videos.contents[0].video.videoId}`
+    iframe.src = `https://www.youtube.com/embed/${videos.contents[0].video.videoId}`// inserta el video
 
-    videoTitle.innerHTML = videos.contents[0].video.title;
+    videoTitle.innerHTML = videos.contents[0].video.title;// inserta el titulo del video
 
-    photoChannel.src = videos.contents[0].video.author.avatar[0].url;
+    photoChannel.src = videos.contents[0].video.author.avatar[0].url;// inserta la foto del canal
 
-    nameChannelText.innerHTML = videos.contents[0].video.author.title;
+    nameChannelText.innerHTML = videos.contents[0].video.author.title;// inserta el nombre del canal
 
-    videoDescription.innerHTML = videos.contents[0].video.descriptionSnippet
+    videoDescription.innerHTML = videos.contents[0].video.descriptionSnippet// inserta la descripcion del video
+
+    //ciclo for para los videos recomendados
+    for (let y = 0; y < videos.contents.length; y++){
+      const div2 = document.createElement('div')
+      div2.setAttribute('class', 'advisedVideosItem')
+
+      div2.innerHTML= `
+        <iframe width="200px" height="130px" src="https://www.youtube.com/embed/${videos.contents[y].video.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    `
+      advisedVideos.appendChild(div2)
+    }
 
     // variable constante para llamar la informacion de los comentarios de la API
     const comentarios = await (
